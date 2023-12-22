@@ -1,0 +1,22 @@
+.tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(140, 25, 95); 
+    padding: 20px; 
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', sans-serif; 
+    width: 30%; 
+    height: auto; 
+  }
+  
+  .tile p {
+    margin: 10px 0; 
+    font-size: 1.2em; 
+    color: white;
+  }
+  
+
+  
