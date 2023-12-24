@@ -39,6 +39,7 @@
   <div class="tile">
     <p>Zuletzt gemeldete Personenanzahl: {latestData.faces_count}</p>
     <p>Zeit: {formatTimestamp(latestData.timestamp)}</p>
+    <a href="https://657ca02c853beeefdb99bbf0.mockapi.io/face_count">Link zu Rohdaten (JSON)</a>
   </div>
 {:else if error}
   <div class="error">Fehler beim Laden der Daten: {error.message}</div>

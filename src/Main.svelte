@@ -2,12 +2,14 @@
     import Header from './components/Header.svelte';
     import Footer from './components/Footer.svelte';
     import ITemperatureTile from './components/ITemperatureTile.svelte';
-    import OTemperatureTile from './components/OTemperatureTile.svelte';
+    import WeatherTile from './components/WeatherTile.svelte';
     import StudentCountTile from './components/StudentCountTile.svelte';
     import StudentCountTileTable from './components/StudentCountTileTable.svelte';
     import ChartTile from './components/ChartTile.svelte';
     import Timetable from './components/Timetable.svelte';
     import ostlogo from './assets/ost.svg';
+    import WeatherTile1 from './components/WeatherTile+1.svelte';
+
   </script>
   
   <style>
@@ -28,7 +30,8 @@
   <img src={ostlogo} alt="OST Logo" style="display: block; margin: 0 auto; vertical-align: middle;">
   
   <div class="dashboard">
-    <OTemperatureTile />
+    <WeatherTile />
+    <WeatherTile1 />
     <Timetable />
     <StudentCountTile />
     <StudentCountTileTable />
