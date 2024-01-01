@@ -7,8 +7,8 @@
   let error = null;
 
   const API_KEY = '62238968e446399c7c0f71e4e810d750'; // API-Schlüssel
-  const LAT = '47.17'; // Breitengrad
-  const LON = '9.47'; // Längengrad
+  const LAT = '47.172'; // Breitengrad
+  const LON = '9.473'; // Längengrad
   const UNITS = 'metric'; // Grad Celsius
   const LANG = 'de'
   const URL = `https://api.openweathermap.org/data/2.5/weather?lat=${LAT}&lon=${LON}&appid=${API_KEY}&units=${UNITS}&lang=${LANG}`;
@@ -35,6 +35,7 @@
 </script>
 
 {#if outdoorWeatherData}
+<h3 style="text-align:center">Wetter jetzt</h3>
 <div class="tile">
   <p>Ort: {outdoorWeatherData.name}</p>
   <p>Aktuelle Aussentemperatur: {outdoorWeatherData.main.temp}°C</p>
@@ -51,5 +52,5 @@
 {:else if error}
 <div class="error">Fehler beim Laden der Wetterdaten: {error.message}</div>
 {:else}
-<div class="loading">Lade Außen-Wetterdaten...</div>
+<div class="loading">Lade Wetterdaten...</div>
 {/if}

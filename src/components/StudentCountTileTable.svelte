@@ -4,6 +4,7 @@
 
   let data = [];
   let error = null;
+  let displayLimit = 6; // Variable für die Anzeigelimit
 
   const API_URL = 'https://657ca02c853beeefdb99bbf0.mockapi.io/face_count';
 
@@ -32,6 +33,14 @@
       second: '2-digit'
     });
   };
+
+  // Funktion zum Laden weiterer Daten
+    const loadMore = () => {
+    displayLimit += 6;
+    if (displayLimit >= 30) {
+      displayLimit = data.length
+    }
+  };
 </script>
 <style>
   .chart-container {
@@ -39,7 +48,7 @@
     margin: auto;     /* Zentriert den Container horizontal */
   }
 </style>
-
+<h3 style="text-align:center">Historie Personenanzahl: Tabelle</h3>
 <div class="chart-container">
   {#if data.length > 0}
     <table class="table table-striped table-bordered">
@@ -51,7 +60,7 @@
         </tr>
       </thead>
       <tbody>
-        {#each data as item}
+        {#each data.slice(0, displayLimit) as item}
           <tr>
             <td>{formatDate(item.timestamp)}</td>
             <td>{formatTime(item.timestamp)}</td>
@@ -60,6 +69,9 @@
         {/each}
       </tbody>
     </table>
+    {#if data.length > displayLimit}
+    <button class="btn btn-primary" on:click={loadMore}>Mehr laden</button>
+    {/if}
   {:else if error}
     <div class="alert alert-danger">Fehler beim Laden der Daten: {error.message}</div>
   {:else}

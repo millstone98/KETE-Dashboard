@@ -2,12 +2,11 @@
   import Header from './components/Header.svelte';
   import Footer from './components/Footer.svelte';
   import WeatherTile from './components/WeatherTile.svelte';
-  import StudentCountTileTotal from './components/StudentCountTileTotal.svelte';
+  import StudentCountTile from './components/StudentCountTile.svelte';
   import StudentCountTileTable from './components/StudentCountTileTable.svelte';
   import ChartTile from './components/ChartTile.svelte';
-  import WeatherTileForecast from './components/WeatherTileForecast.svelte'
-  import TimetableTotal from './components/TimetableTotal.svelte';
-  import SchoolRooms from './components/SchoolRooms.svelte';
+  import Timetable from './components/Timetable.svelte';
+  import WeatherTileForecast from './components/WeatherTileForecast.svelte';
 </script>
 
 <style>
@@ -21,7 +20,7 @@
         font-family: 'Roboto', sans-serif;
         text-align: center;
   }
-
+  
   .top{
         padding-top: 30px;
         padding-bottom: 50px;
@@ -31,7 +30,7 @@
 
 <Header />
 <div class="top">
-  <h1>Tatsächliche Raumnutzung - OST Buchs SG (gesamter Campus)</h1>
+  <h1>Tatsächliche Raumnutzung - OST Buchs SG (SW101)</h1>
 </div>
 
 <div class="accordion" id="accordionPanelsStayOpenExample">
@@ -45,10 +44,10 @@
       <div class="accordion-body">
         <div class="row">
           <div class="col">
-            <StudentCountTileTotal />
+            <StudentCountTile />
           </div>
           <div class="col">
-            <TimetableTotal />
+            <Timetable />
           </div>
         </div>        
       </div>
@@ -70,22 +69,10 @@
   <div class="accordion-item">
     <h2 class="accordion-header">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-        Übersicht Schulräume
-      </button>
-    </h2>
-    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
-      <div class="accordion-body">
-        <SchoolRooms />
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
         Wetter
       </button>
     </h2>
-    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
       <div class="accordion-body">
         <div class="row">
           <div class="col">

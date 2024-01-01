@@ -36,6 +36,7 @@
 </script>
 
 {#if latestData}
+<h3 style="text-align:center">Personen jetzt (Ist-Belegung)</h3>
   <div class="tile">
     <p>Zuletzt gemeldete Personenanzahl: {latestData.faces_count}</p>
     <p>Zeit: {formatTimestamp(latestData.timestamp)}</p>

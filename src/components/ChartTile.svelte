@@ -64,6 +64,7 @@
     }
   </style>
 
+  <h3 style="text-align:center">Historie Personenanzahl: Liniendiagramm</h3>
   <div class="chart-container">
     <canvas id="lineChart"></canvas>
     <a href="https://657ca02c853beeefdb99bbf0.mockapi.io/face_count">Link zu Rohdaten (JSON)</a>
