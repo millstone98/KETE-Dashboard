@@ -17,6 +17,8 @@
     });
   
     function createChart(data) {
+    //Erstellen der Konstante "filteredData", welche die erfassten Daten der Kamera im Linechart nur im 10-Minuten Intervall anzeigt. Zu Illustrationszwecken auskommentiert.
+    /*
     const filteredData = data.reduce((acc, item) => {
         const lastItem = acc[acc.length - 1];
         const currentItemTime = new Date(item.timestamp);
@@ -25,12 +27,12 @@
         }
         return acc;
     }, []);
-
+    */
     const ctx = document.getElementById('lineChart').getContext('2d');
     chart = new Chart(ctx, {
         type: 'line',
         data: {
-            labels: filteredData.map(item => new Date(item.timestamp).toLocaleString('de-DE', {
+            labels: data.map(item => new Date(item.timestamp).toLocaleString('de-DE', { //für 10 min Intervall hier filteredData.map statt data.map verwenden!
                 day: '2-digit',
                 month: '2-digit',
                 year: 'numeric',
@@ -40,7 +42,7 @@
             })),
             datasets: [{
                 label: 'Gemeldete Personenanzahl',
-                data: filteredData.map(item => item.faces_count),
+                data: data.map(item => item.faces_count), //für 10 min Intervall hier filteredData.map statt data.map verwenden!
                 fill: false,
                 borderColor: 'rgb(75, 192, 192)',
                 tension: 0.1
