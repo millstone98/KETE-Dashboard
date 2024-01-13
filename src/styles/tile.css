@@ -1,3 +1,5 @@
+/* StudentCountTile.svelte + StudentCountTileTotal.svelte */
+
 .tile {
     display: flex;
     flex-direction: column;

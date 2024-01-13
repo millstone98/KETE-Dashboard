@@ -1,19 +1,20 @@
 <script>
   import Header from './components/Header.svelte';
   import Footer from './components/Footer.svelte';
-  import WeatherTile from './components/WeatherTile.svelte';
-  import StudentCountTileTotal from './components/StudentCountTileTotal.svelte';
-  import StudentCountTileTable from './components/StudentCountTileTable.svelte';
-  import ChartTile from './components/ChartTile.svelte';
-  import WeatherTileForecast from './components/WeatherTileForecast.svelte'
-  import TimetableTotal from './components/TimetableTotal.svelte';
-  import SchoolRooms from './components/SchoolRooms.svelte';
+  import Weather from './components/Weather.svelte';
+  import WeatherForecast from './components/WeatherForecast.svelte'
+
+  import TotalStudentCountTile from './components/Total/Total-StudentCountTile.svelte';
+  import TotalHistoryTable from './components/Total/Total-History-Table.svelte';
+  import TotalHistoryChart from './components/Total/Total-History-Chart.svelte';
+  import TotalTimeTable from './components/Total/Total-Timetable.svelte';
+  import SchoolRooms from './components/Total/SchoolRooms.svelte';
 </script>
 
 <style>
   .accordion-button{
     font-size: 25px;
-    background-color: rgb(215, 40, 100); 
+    background-color: rgb(215, 40, 100);
     font: rgb(255, 255, 255);
   }
 
@@ -45,10 +46,10 @@
       <div class="accordion-body">
         <div class="row">
           <div class="col">
-            <StudentCountTileTotal />
+            <TotalStudentCountTile />
           </div>
           <div class="col">
-            <TimetableTotal />
+            <TotalTimeTable />
           </div>
         </div>        
       </div>
@@ -62,8 +63,8 @@
     </h2>
     <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
       <div class="accordion-body">
-        <ChartTile />
-        <StudentCountTileTable />
+        <TotalHistoryChart />
+        <TotalHistoryTable />
       </div>
     </div>
   </div>
@@ -89,10 +90,10 @@
       <div class="accordion-body">
         <div class="row">
           <div class="col">
-            <WeatherTile />
+            <Weather />
           </div>
           <div class="col">
-            <WeatherTileForecast />
+            <WeatherForecast />
           </div>
         </div>
       </div>

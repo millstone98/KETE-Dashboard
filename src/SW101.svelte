@@ -1,12 +1,14 @@
 <script>
   import Header from './components/Header.svelte';
   import Footer from './components/Footer.svelte';
-  import WeatherTile from './components/WeatherTile.svelte';
-  import StudentCountTile from './components/StudentCountTile.svelte';
-  import StudentCountTileTable from './components/StudentCountTileTable.svelte';
-  import ChartTile from './components/ChartTile.svelte';
-  import Timetable from './components/Timetable.svelte';
-  import WeatherTileForecast from './components/WeatherTileForecast.svelte';
+  import Weather from './components/Weather.svelte';
+  import WeatherForecast from './components/WeatherForecast.svelte';
+
+  import StudentCountTile from './components/SW101/SW101-StudentCountTile.svelte';
+  import Timetable from './components/SW101/SW101-Timetable.svelte';
+
+  import HistoryChart from './components/SW101/SW101-History-Chart.svelte';
+  import HistoryTable from './components/SW101/SW101-History-Table.svelte';
 </script>
 
 <style>
@@ -61,8 +63,8 @@
     </h2>
     <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
       <div class="accordion-body">
-        <ChartTile />
-        <StudentCountTileTable />
+        <HistoryChart />
+        <HistoryTable />
       </div>
     </div>
   </div>
@@ -76,10 +78,10 @@
       <div class="accordion-body">
         <div class="row">
           <div class="col">
-            <WeatherTile />
+            <Weather />
           </div>
           <div class="col">
-            <WeatherTileForecast />
+            <WeatherForecast />
           </div>
         </div>
       </div>

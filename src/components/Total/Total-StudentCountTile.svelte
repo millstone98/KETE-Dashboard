@@ -1,7 +1,5 @@
 <script>
-  import axios from 'axios';
-  import { onMount } from 'svelte';
-  import '../styles/tile.css'; 
+  import '../../styles/tile.css';
 </script>
 
 <h3 style="text-align:center">Total: Personen jetzt (Ist-Belegung)</h3>

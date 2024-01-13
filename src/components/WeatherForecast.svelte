@@ -41,6 +41,7 @@
   <div>
     <h3>Wettervorhersage für {weatherData.city.name}</h3>
     <table class="table table-striped">
+      <!-- Kopfzeile der Tabelle mit den Spaltentiteln. -->
       <thead>
         <tr>
           <th>Zeit</th>
@@ -51,8 +52,10 @@
         </tr>
       </thead>
       <tbody>
+        <!-- Schleife über die Wetterdaten, begrenzt durch 'displayLimit'. -->
         {#each weatherData.list.slice(0, displayLimit) as interval}
           <tr>
+            <!-- Anzeige der formatierten Zeit, Temperatur, Wetterbeschreibung usw. -->
             <td>{formatDate(interval.dt)}</td>
             <td>{interval.main.temp}°C</td>
             <td>{interval.weather[0].description}</td>
