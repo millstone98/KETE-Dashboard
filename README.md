@@ -28,3 +28,7 @@ You can preview the production build with `npm run preview`.
 There is a deployed version of this project, published with [netlify](https://www.netlify.com).
 
 URL: https://kete-dashboard.netlify.app/
+
+## Corresponding Camera Process Software
+
+[Camera Process Software](https://github.com/millstone98/KETE-Process-Software)
