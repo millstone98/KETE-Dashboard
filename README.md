@@ -1,6 +1,8 @@
 # KETE-Dashboard (HS-2023)
 
-Created by Ruben Antenen, Raphael Bernhardsgrütter, Antonia Galliker, Silvan Mühlestein and Bianca Pauger
+Created by Ruben Antenen, Raphael Bernhardsgrütter, Antonia Galliker, Silvan Mühlestein and Bianca Pauger.
+
+Explanation of the code and functionalities by the creators (in German): [YouTube](https://youtu.be/SiYVgzyTTCc)
 
 ## Developing
 
